@@ -1,0 +1,15 @@
+packages:
+  - apps/*
+  - packages/*
+
+saveExact: true
+engineStrict: true
+strictPeerDependencies: true
+
+allowBuilds:
+  '@nestjs/core': false
+  '@parcel/watcher': false
+  '@prisma/client': false
+  '@prisma/engines': true
+  prisma: true
+  unrs-resolver: false

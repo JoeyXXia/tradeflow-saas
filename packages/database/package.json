@@ -1,0 +1,8 @@
+{
+  "name": "@tradeflow/database",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Day 1 version pins only; schema and database access start on Day 2.",
+  "dependencies": { "@prisma/client": "7.10.1" },
+  "devDependencies": { "prisma": "7.10.1" }
+}

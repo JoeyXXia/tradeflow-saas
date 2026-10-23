@@ -1,0 +1,25 @@
+{
+  "name": "tradeflow-saas",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": "24.19.0", "pnpm": "11.25.0" },
+  "scripts": {
+    "build": "pnpm --filter @tradeflow/api build",
+    "dev": "pnpm build && pnpm start",
+    "start": "node --env-file-if-exists=.env apps/api/dist/main.js",
+    "lint": "eslint . --max-warnings=0",
+    "test": "pnpm build && jest --runInBand",
+    "test:unit": "pnpm build && jest --runInBand tests/unit",
+    "test:smoke": "pnpm build && jest --runInBand tests/smoke",
+    "check": "pnpm lint && pnpm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.0.0",
+    "eslint": "10.13.0",
+    "jest": "30.5.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.0"
+  }
+}
